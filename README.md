@@ -112,6 +112,27 @@ All exported images are saved to a single output folder:
 - TIFF (.tiff, .tif)
 - BMP (.bmp)
 
+## Creating Windows Executable
+
+To compile this application into a standalone Windows executable:
+
+1. Install PyInstaller:
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. Create executable:
+   ```bash
+   pyinstaller --onefile --windowed main.py
+   ```
+
+3. Add icon (optional):
+   ```bash
+   pyinstaller --onefile --windowed --icon=icon.ico main.py
+   ```
+
+The `--windowed` flag prevents console window from appearing. Output will be in `dist/` folder.
+
 ## Advanced Features
 
 ### Per-Image Mode System
